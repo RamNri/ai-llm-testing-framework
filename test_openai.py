@@ -1,0 +1,17 @@
+import os
+
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv(override=True)
+
+client = OpenAI(
+    api_key=os.getenv("OPENAI_API_KEY")
+)
+
+response = client.responses.create(
+    model="gpt-5-mini",
+    input="Say hello in one sentence."
+)
+
+print(response.output_text)
