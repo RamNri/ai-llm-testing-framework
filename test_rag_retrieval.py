@@ -5,7 +5,9 @@ from simple_rag import retrieve_relevant_docs, load_vector_store
 
 
 vector_store = load_vector_store()
-query = "How do I use Dark Mode?"
+query = "How do I change the engine oil in my car?"
+
+#How do I use Dark Mode?
 
 results = retrieve_relevant_docs(vector_store=vector_store, query=query, k=3)
 
